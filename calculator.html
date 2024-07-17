@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="widdiv=device-widdiv, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./public/styles.css">
+	<link rel="stylesheet" href="./public/number.css">
+	<title>CALCULATOR</title>
+</head>
+
+<body>
+	<header class="h-44 text-white pt-8 pb-20 z-20 bg-blue-#212E55">
+		<div class="container w-[1280px] px-2.5 px-2.5 mx-auto px-2">
+			<div class="flex items-center justify-between">
+				<div class="flex items-center">
+					<a href="#"><img src="./public/img/logoLeft.svg" alt=""></a>
+					<a class="ml-2" href="#"><img src="./public/img/logoRight.svg" alt=""></a>
+				</div>
+				<nav>
+					<ul class="flex items-center text-grey-#C5CBDA font-bold text-2xl">
+						<li
+							class=" hover:text-white hover:after:w-8 hover:after:h-1 hover:after:absolute hover:after:left-0 hover:after:-bottom-2 hover:after:bg-green-#0AAF60 relative">
+							<a href="#">Главная</a>
+						</li>
+						<li
+							class="ml-12 hover:text-white hover:after:w-8 hover:after:h-1 hover:after:absolute hover:after:left-0 hover:after:-bottom-2 hover:after:bg-green-#0AAF60 relative">
+							<a href="#">Калькулятор</a>
+						</li>
+						<li
+							class="ml-12 hover:text-white hover:after:w-8 hover:after:h-1 hover:after:absolute hover:after:left-0 hover:after:-bottom-2 hover:after:bg-green-#0AAF60 relative">
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="flex items-center">
+					<div class="flex items-center font-bold text-4xl">
+						<a href="#"><img src="./public/img/tel.svg" alt=""></a>
+						<a class="ml-2" href="tel:+79266291134">+7 926 629 11 34</a>
+					</div>
+					<div class="flex items-center ml-12 font-semibold text-base">
+						<div class="flex items-center">
+							<a class="p-4  bg-blue-#121B35 rounded-full" href="#"><img src="./public/img/avatar.svg" alt=""></a>
+							<a class="ml-2" href="#">Войти</a>
+						</div>
+						<button class="bg-white text-blue-#121B35 ml-4 py-3 px-4 rounded-full">Регистрация</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container w-[1280px] px-2.5 mx-auto mt-12">
+			<h3 class="text-black-#26272C text-9xl font-exdivabold mb-6">Складской калькулятор</h3>
+			<div class="flex items-center py-4 px-5 rounded-md border-blue-#212E55 border-2 mb-10">
+				<a href="#">
+					<img src="./public/img/info.svg" alt="">
+				</a>
+				<p class="ml-3 font-semibold text-blue-#212E55 text-7xl">Работаем от 1 штуки товара</p>
+			</div>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10">
+			<div
+				class=" border-2 border-grey-#9E9FA3  rounded-md py-10 px-8 border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A">
+				<div class="flex items-center mb-12">
+					<p class="text-black-#37383C font-extrabold">Количество товара в штуках:</p>
+					<div class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center ml-10 h-16 relative">
+						<button class="absolute top-0 right-0 w-[27px] py-1 border-l border-b border-grey-#85868C" type="button"
+							onclick="this.nextElementSibling.stepUp(); this.nextElementSibling.onchange();">+</button>
+						<input type="number" value="1400" name="" id="col" class="bg-grey-#F4F4F4 w-40">
+						<button class="absolute bottom-0 right-0 w-[27px] py-1 border-l border-grey-#85868C"
+							onclick="this.previousElementSibling.stepDown(); this.previousElementSibling.onchange();"
+							type="button">-</button>
+						<label for="col" class="text-grey-#77787B text-base ml-10 mr-10">шт.</label>
+					</div>
+				</div>
+				<table class="border-separate border-spacing-0 w-full mb-12">
+					<thead class="text-black-#37383C text-4xl font-extrabold">
+						<tr>
+							<th class="border border-grey-#85868C rounded-t-md px-4 py-5 bg-grey-#F8F8F8 text-left">
+								Габариты одной единицы товара в сложенном виде (см):
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="border border-t-0 rounded-b-md border-grey-#85868C px-4 py-5">
+								<div class="flex items-center justify-around">
+									<div
+										class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center h-16 relative">
+										<div class="flex flex-col items-start">
+											<label for="col" class="text-grey-#5A5A5A text-xl text-base">Длина:</label>
+											<button class="absolute top-0 right-0 w-[27px] py-1 border-l border-b border-grey-#85868C"
+												type="button"
+												onclick="this.nextElementSibling.stepUp(); this.nextElementSibling.onchange();">+</button>
+											<input type="number" value="1400" name="" id="col" class="bg-grey-#F4F4F4 w-40">
+											<button class="absolute bottom-0 right-0 w-[27px] py-1 border-l border-grey-#85868C"
+												onclick="this.previousElementSibling.stepDown(); this.previousElementSibling.onchange();"
+												type="button">-</button>
+										</div>
+										<label for="col" class="text-grey-#77787B text-base ml-10 mr-10">см.</label>
+									</div>
+									<div
+										class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center h-16 relative">
+										<div class="flex flex-col items-start">
+											<label for="col" class="text-grey-#5A5A5A text-xl">Ширина:</label>
+											<button class="absolute top-0 right-0 w-[27px] py-1 border-l border-b border-grey-#85868C"
+												type="button"
+												onclick="this.nextElementSibling.stepUp(); this.nextElementSibling.onchange();">+</button>
+											<input type="number" value="1400" name="" id="col" class="bg-grey-#F4F4F4 w-40">
+											<button class="absolute bottom-0 right-0 w-[27px] py-1 border-l border-grey-#85868C"
+												onclick="this.previousElementSibling.stepDown(); this.previousElementSibling.onchange();"
+												type="button">-</button>
+										</div>
+										<label for="col" class="text-grey-#77787B text-base ml-10 mr-10">см.</label>
+									</div>
+									<div
+										class="border border-grey-#85868C bg-grey-#F4F4F4 rounded-md pl-4 flex items-center h-16 relative">
+										<div class="flex flex-col items-start">
+											<label for="col" class="text-grey-#5A5A5A text-xl">Высота:</label>
+											<button class="absolute top-0 right-0 w-[27px] py-1 border-l border-b border-grey-#85868C"
+												type="button"
+												onclick="this.nextElementSibling.stepUp(); this.nextElementSibling.onchange();">+</button>
+											<input type="number" value="1400" name="" id="col" class="bg-grey-#F4F4F4 w-40">
+											<button class="absolute bottom-0 right-0 w-[27px] py-1 border-l border-grey-#85868C"
+												onclick="this.previousElementSibling.stepDown(); this.previousElementSibling.onchange();"
+												type="button">-</button>
+										</div>
+										<label for="col" class="text-grey-#77787B text-base ml-10 mr-10">см.</label>
+									</div>
+
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="border-separate border-spacing-0 w-full">
+					<thead class="text-black-#37383C text-4xl font-extrabold">
+						<tr>
+							<th class="border-l border-t rounded-tl-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8 w-1/2">
+								Объем одной единицы товара (в литрах)
+							</th>
+							<th class="border border-b-0 rounded-tr-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">
+								Общий объем товаров (в литрах)
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="border border-r-0 rounded-bl-md border-grey-#85868C px-4 py-5">4,80</td>
+							<td class="border rounded-br-md border-grey-#85868C px-4 py-5">6 720,00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10 relative">
+			<div
+				class="absolute left-2.5 top-0 py-1 px-1.5 bg-green-#0AAF60 text-white text-sm font-black text-center rounded-tl-md rounded-br-md">
+				01
+			</div>
+			<table
+				class="border-separate border-2 border-grey-#9E9FA3 rounded-md py-10 px-8 border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A ">
+				<thead class="text-black-#37383C text-4xl font-extrabold">
+					<tr>
+						<th class="border border-grey-#85868C rounded-tl-md px-4 py-5 bg-grey-#F8F8F8 text-left">Приемка на нашем
+							складе</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Выбор</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Единица измерения</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Количество</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Стоимость услуг <br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(рублей за единицу)</span>
+						</th>
+						<th class="border border-l-0 border-grey-#85868C rounded-tr-md px-4 py-5 bg-grey-#F8F8F8">Итоговая сумма
+							<br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(в рублях)</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left w-1/3">
+							<h6 class="mb-5 text-6xl text-blue-#212E55">Попаллетно</h6>
+							<p class="mb-2 text-6xl">Что входит в услугу:</p>
+							<ul class="font-normal list-decimal list-inside ml-2">
+								<li class="mb-2.5"> Механизированная выгрузка паллеты</li>
+								<li class="mb-2.5"> Установка паллеты на места хранения</li>
+								<li class="mb-2.5"> Снятие паллеты для обработки товаров</li>
+								<li> Распалечивание паллеты</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-1" name="yes-no-1" value="yes-1" class="hidden peer">
+									<label for="yes-1"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-1" name="yes-no-1" value="no-1" class="hidden peer" checked>
+									<label for="no-1"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">литры</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">6 720</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">0,15</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">0</td>
+					</tr>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 rounded-bl-md text-left">
+							<h6 class="mb-5 text-6xl text-blue-#212E55">Внавал, в мешках, в обрешетке</h6>
+							<p class="mb-2 text-6xl">Что входит в услугу:</p>
+							<ul class="font-normal list-decimal list-inside ml-2">
+								<li class="mb-2.5"> Ручная выгрузка грузов</li>
+								<li class="mb-2.5"> Вскрытие мешков</li>
+								<li class="mb-2.5"> Снятие обрешетки</li>
+								<li class="mb-2.5"> Предоставление паллеты для хранения</li>
+								<li class="mb-2.5"> Формирование паллеты для места хранения</li>
+								<li class="mb-2.5"> Установка паллеты на места хранения</li>
+								<li class="mb-2.5"> Снятие паллеты для обработки товаров</li>
+								<li> Распалечивание паллеты</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-2" name="yes-no-2" value="yes-2" class="hidden peer" checked>
+									<label for="yes-2"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-2" name="yes-no-2" value="no-2" class="hidden peer">
+									<label for="no-2"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">литры</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">6 720</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">0,5</td>
+						<td
+							class="border-r border-b border-grey-#85868C px-4 py-5 rounded-br-md text-green-#0AAF60 text-7.5xl font-extrabold">
+							<div class="flex items-center justify-center relative">
+								<span class="justify-self-center text-center">3 360</span>
+								<svg class="inline-block justify-self-end ml-4 peer" width="20" height="20" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M10 7H10.01M9 10H10V14H11M1 10C1 11.1819 1.23279 12.3522 1.68508 13.4442C2.13738 14.5361 2.80031 15.5282 3.63604 16.364C4.47177 17.1997 5.46392 17.8626 6.55585 18.3149C7.64778 18.7672 8.8181 19 10 19C11.1819 19 12.3522 18.7672 13.4442 18.3149C14.5361 17.8626 15.5282 17.1997 16.364 16.364C17.1997 15.5282 17.8626 14.5361 18.3149 13.4442C18.7672 12.3522 19 11.1819 19 10C19 7.61305 18.0518 5.32387 16.364 3.63604C14.6761 1.94821 12.3869 1 10 1C7.61305 1 5.32387 1.94821 3.63604 3.63604C1.94821 5.32387 1 7.61305 1 10Z"
+										stroke="#85868C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<div
+									class="bg-black-#26272C text-white p-4 rounded-md rounded-tl-none text-base font-normal text-left absolute -top-2 -right-[305px] w-72 opacity-0 peer-hover:opacity-100">
+									<div class="w-2 overflow-hidden inline-block absolute left-0 top-5">
+										<div class=" h-3  bg-green-#0AAF60 rotate-45 transform origin-top-left"></div>
+									</div>
+									<h6 class="mb-4">
+										Стоимость забора груза включает в себя:</h6>
+									<ul class="list-decimal list-inside">
+										<li class="mb-3">Плату за въезд на территорию комплекса,</li>
+										<li class="mb-3">Погрузочно-разгрузочные работы,</li>
+										<li class="mb-3">Доставку до нашего склада,</li>
+										<li>Выгрузку на наш склад"</li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10 relative">
+			<div
+				class="absolute left-2.5 top-0 py-1 px-1.5 bg-green-#0AAF60 text-white text-sm font-black text-center rounded-tl-md rounded-br-md">
+				02
+			</div>
+			<table
+				class="border-separate border-2 border-grey-#9E9FA3 rounded-md py-10 px-8 border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A">
+				<thead class="text-black-#37383C text-4xl font-extrabold">
+					<tr>
+						<th class="border rounded-tl-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8 text-left">
+							Подготовительные работы
+						</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Выбор</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Единица измерения</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Количество</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Стоимость услуг <br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(рублей за единицу)</span>
+						</th>
+						<th class="border border-l-0 border-grey-#85868C rounded-tr-md px-4 py-5 bg-grey-#F8F8F8">Итоговая сумма
+							<br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(в рублях)</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left w-1/3 rounded-bl-md">
+							<h6 class="mb-5 text-6xl text-blue-#212E55">Поштучный пересчет</h6>
+							<p class="mb-2 text-6xl">Что входит в услугу:</p>
+							<ul class="font-normal list-decimal list-inside ml-2">
+								<li class="mb-2.5"> Поштучный пересчет</li>
+								<li class="mb-2.5"> Визуальная проверка на брак</li>
+								<li class="mb-2.5"> Визуальная проверка на наличие штрихкода</li>
+								<li class="mb-2.5"> Снятие весо-габаритных характеристик (ВГХ)</li>
+								<li class="mb-2.5"> Внесения ВГХ в нашу базу данных 1С</li>
+								<li> Выгрузка товаров в ЛК пользователя на сайте www.pillavi.ru</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-3" name="yes-no-3" value="yes-3" class="hidden peer" checked>
+									<label for="yes-3"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-3" name="yes-no-3" value="no-3" class="hidden peer">
+									<label for="no-3"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">штуки</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1 400</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">8</td>
+						<td
+							class="border-r border-b border-grey-#85868C px-4 py-5 text-green-#0AAF60 text-7.5xl font-extrabold rounded-br-md">
+							<div class="flex items-center justify-center relative">
+								<span class="justify-self-center text-center">11 200</span>
+								<svg class="inline-block justify-self-end ml-4 peer" width="20" height="20" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M10 7H10.01M9 10H10V14H11M1 10C1 11.1819 1.23279 12.3522 1.68508 13.4442C2.13738 14.5361 2.80031 15.5282 3.63604 16.364C4.47177 17.1997 5.46392 17.8626 6.55585 18.3149C7.64778 18.7672 8.8181 19 10 19C11.1819 19 12.3522 18.7672 13.4442 18.3149C14.5361 17.8626 15.5282 17.1997 16.364 16.364C17.1997 15.5282 17.8626 14.5361 18.3149 13.4442C18.7672 12.3522 19 11.1819 19 10C19 7.61305 18.0518 5.32387 16.364 3.63604C14.6761 1.94821 12.3869 1 10 1C7.61305 1 5.32387 1.94821 3.63604 3.63604C1.94821 5.32387 1 7.61305 1 10Z"
+										stroke="#85868C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<div
+									class="bg-black-#26272C text-white p-4 rounded-md rounded-tl-none text-base font-normal text-left absolute -top-2 -right-[305px] w-72 opacity-0 peer-hover:opacity-100">
+									<div class="w-2 overflow-hidden inline-block absolute left-0 top-5">
+										<div class=" h-3  bg-green-#0AAF60 rotate-45 transform origin-top-left"></div>
+									</div>
+									<h6 class="mb-4">
+										Стоимость забора груза включает в себя:</h6>
+									<ul class="list-decimal list-inside">
+										<li class="mb-3">Плату за въезд на территорию комплекса,</li>
+										<li class="mb-3">Погрузочно-разгрузочные работы,</li>
+										<li class="mb-3">Доставку до нашего склада,</li>
+										<li>Выгрузку на наш склад"</li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10 relative">
+			<div
+				class="absolute left-2.5 top-0 py-1 px-1.5 bg-green-#0AAF60 text-white text-sm font-black text-center rounded-tl-md rounded-br-md">
+				03
+			</div>
+			<table
+				class="border-separate border-2 border-grey-#9E9FA3 rounded-md py-10 px-8 border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A">
+				<thead class="text-black-#37383C text-4xl font-extrabold">
+					<tr>
+						<th class="border rounded-tl-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8 text-left">
+							Упаковка товаров (материал + работа)
+						</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Выбор</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Единица измерения</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Количество</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Стоимость услуг <br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(рублей за единицу)</span>
+						</th>
+						<th class="border border-l-0 border-grey-#85868C rounded-tr-md px-4 py-5 bg-grey-#F8F8F8">Итоговая сумма
+							<br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(в рублях)</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left w-1/3 rounded-bl-md">
+							Упаковка в термоусадочную пленку (19 мкм) + термоусадка
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-4" name="yes-no-4" value="yes-4" class="hidden peer">
+									<label for="yes-4"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-4" name="yes-no-4" value="no-4" class="hidden peer" checked>
+									<label for="no-4"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">штуки</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1 400</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">17,66</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 rounded-br-md">0</td>
+					</tr>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5  text-left rounded-bl-md">
+							Упаковка в полурукав (белый наглухо или прозрачный) + запайка
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-5" name="yes-no-5" value="yes-5" class="hidden peer">
+									<label for="yes-5"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-5" name="yes-no-5" value="no-5" class="hidden peer" checked>
+									<label for="no-5"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">штуки</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1 400</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">18,19</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 rounded-br-md">0</td>
+					</tr>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left w-1/3 rounded-bl-md">
+							Упаковка в курьер пакет с клеевым клапаном (60 мкм)
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-6" name="yes-no-6" value="yes-6" class="hidden peer">
+									<label for="yes-6"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-6" name="yes-no-6" value="no-6" class="hidden peer" checked>
+									<label for="no-6"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">штуки</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1 400</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">19,9</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 rounded-br-md">0</td>
+					</tr>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5  text-left rounded-bl-md">
+							Упаковка в зип-лок пакет (обычный)
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-7" name="yes-no-7" value="yes-7" class="hidden peer">
+									<label for="yes-7"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-7" name="yes-no-7" value="no-7" class="hidden peer" checked>
+									<label for="no-7"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">штуки</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1 400</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">20,35</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 rounded-br-md">0</td>
+					</tr>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left w-1/3 rounded-bl-md">
+							Упаковка в зип-лок пакет (с бегунком)
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-8" name="yes-no-8" value="yes-8" class="hidden peer">
+									<label for="yes-8"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-8" name="yes-no-8" value="no-8" class="hidden peer" checked>
+									<label for="no-8"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">штуки</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1 400</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">20,35</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 rounded-br-md">0</td>
+					</tr>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5  text-left rounded-bl-md">
+							Упаковка в ВПП пленку + скотч
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-9" name="yes-no-9" value="yes-9" class="hidden peer" checked>
+									<label for="yes-9"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-9" name="yes-no-9" value="no-9" class="hidden peer">
+									<label for="no-9"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">штуки</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1 400</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">17,78</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 rounded-br-md rounded-br-md">0</td>
+					</tr>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 rounded-bl-md text-left">
+							Маркировка стикера (любой стикер на выбор: 40*30, 58*40, или 100*72)
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">
+							<p class="mb-2.5">Количество:</p>
+							<ul class="">
+								<li class="mb-4">
+									<input type="radio" id="1" name="1-2-3" value="1" class="hidden peer" checked>
+									<label for="1"
+										class="relative before:absolute before:top-[4.5px] before:-left-[23px] before:rounded-full before:p-1.5 after:absolute after:top-0 after:-left-7 after:border after:border-grey-#85868C after:rounded-full after:p-2.5 after:cursor-pointer after:peer-checked:border after:peer-checked:border-green-#0AAF60 before:peer-checked:bg-green-#0AAF60">
+										1
+									</label>
+								</li>
+								<li class="mb-4">
+									<input type="radio" id="2" name="1-2-3" value="2" class="hidden peer">
+									<label for="2"
+										class="relative before:absolute before:top-[5px] before:-left-[23px] before:rounded-full before:p-1.5 after:absolute after:top-0 after:-left-7 after:border after:border-grey-#85868C after:rounded-full after:p-2.5 after:cursor-pointer after:peer-checked:border after:peer-checked:border-green-#0AAF60 before:peer-checked:bg-green-#0AAF60">
+										2
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="3" name="1-2-3" value="3" class="hidden peer">
+									<label for="3"
+										class="relative before:absolute before:top-[4.5px] before:-left-[23px] before:rounded-full before:p-1.5 after:absolute after:top-0 after:-left-7 after:border after:border-grey-#85868C after:rounded-full after:p-2.5 after:cursor-pointer after:peer-checked:border after:peer-checked:border-green-#0AAF60 before:peer-checked:bg-green-#0AAF60">
+										3
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">штуки</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1 400</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">5</td>
+						<td
+							class="border-r border-b border-grey-#85868C px-4 py-5 rounded-br-md text-green-#0AAF60 text-7.5xl font-extrabold">
+							<div class="flex items-center justify-center relative">
+								<span class="justify-self-center text-center">7000</span>
+								<svg class="inline-block justify-self-end ml-4 peer" width="20" height="20" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M10 7H10.01M9 10H10V14H11M1 10C1 11.1819 1.23279 12.3522 1.68508 13.4442C2.13738 14.5361 2.80031 15.5282 3.63604 16.364C4.47177 17.1997 5.46392 17.8626 6.55585 18.3149C7.64778 18.7672 8.8181 19 10 19C11.1819 19 12.3522 18.7672 13.4442 18.3149C14.5361 17.8626 15.5282 17.1997 16.364 16.364C17.1997 15.5282 17.8626 14.5361 18.3149 13.4442C18.7672 12.3522 19 11.1819 19 10C19 7.61305 18.0518 5.32387 16.364 3.63604C14.6761 1.94821 12.3869 1 10 1C7.61305 1 5.32387 1.94821 3.63604 3.63604C1.94821 5.32387 1 7.61305 1 10Z"
+										stroke="#85868C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<div
+									class="bg-black-#26272C text-white p-4 rounded-md rounded-tl-none text-base font-normal text-left absolute -top-2 -right-[305px] w-72 opacity-0 peer-hover:opacity-100">
+									<div class="w-2 overflow-hidden inline-block absolute left-0 top-5">
+										<div class=" h-3  bg-green-#0AAF60 rotate-45 transform origin-top-left"></div>
+									</div>
+									<h6 class="mb-4">
+										Стоимость забора груза включает в себя:</h6>
+									<ul class="list-decimal list-inside">
+										<li class="mb-3">Плату за въезд на территорию комплекса,</li>
+										<li class="mb-3">Погрузочно-разгрузочные работы,</li>
+										<li class="mb-3">Доставку до нашего склада,</li>
+										<li>Выгрузку на наш склад"</li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10 relative">
+			<div
+				class="absolute left-2.5 top-0 py-1 px-1.5 bg-green-#0AAF60 text-white text-sm font-black text-center rounded-tl-md rounded-br-md">
+				04
+			</div>
+			<table
+				class="border-separate border-2 border-grey-#9E9FA3 rounded-md py-10 px-8 border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A">
+				<thead class="text-black-#37383C text-4xl font-extrabold">
+					<tr>
+						<th class="border rounded-tl-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8 text-left">
+							Подготовка партии товара к отгрузке
+						</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Выбор</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Единица измерения</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Количество</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Стоимость услуг <br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(рублей за единицу)</span>
+						</th>
+						<th class="border border-l-0 border-grey-#85868C rounded-tr-md px-4 py-5 bg-grey-#F8F8F8">Итоговая сумма
+							<br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(в рублях)</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left w-1/3 rounded-bl-md">
+							<h6 class="mb-5 text-6xl text-blue-#212E55">Подготовка к отгрузке</h6>
+							<p class="mb-2 text-6xl">Что входит в данную услугу:</p>
+							<ul class="font-normal list-decimal list-inside ml-2">
+								<li class="mb-2.5"> Предоставление гофрокороба для подбора товаров</li>
+								<li class="mb-2.5"> Подбор товаров в гофрокороб</li>
+								<li class="mb-2.5"> Заклеивание гофрокороба скотчем</li>
+								<li class="mb-2.5"> Наклейка маркировочной этикетки на гофрокороб</li>
+								<li class="mb-2.5"> Предоставление деревянной паллеты 120*80 см</li>
+								<li class="mb-2.5"> Подбор транспортировочных гофрокоробов на паллету</li>
+								<li class="mb-2.5"> Обтяжка паллеты стрейч пленкой</li>
+								<li class="mb-2.5"> Наклейка упаковочного листа и стикеров на паллету</li>
+								<li> Погрузка паллеты в автотранспорт</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-10" name="yes-no-10" value="yes-10" class="hidden peer" checked>
+									<label for="yes-10"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-10" name="yes-no-10" value="no-10" class="hidden peer">
+									<label for="no-10"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">литры</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">6 720</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1</td>
+						<td
+							class="border-r border-b border-grey-#85868C px-4 py-5 text-green-#0AAF60 text-7.5xl font-extrabold rounded-br-md">
+							<div class="flex items-center justify-center relative">
+								<span class="justify-self-center text-center">6 720</span>
+								<svg class="inline-block justify-self-end ml-4 peer" width="20" height="20" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M10 7H10.01M9 10H10V14H11M1 10C1 11.1819 1.23279 12.3522 1.68508 13.4442C2.13738 14.5361 2.80031 15.5282 3.63604 16.364C4.47177 17.1997 5.46392 17.8626 6.55585 18.3149C7.64778 18.7672 8.8181 19 10 19C11.1819 19 12.3522 18.7672 13.4442 18.3149C14.5361 17.8626 15.5282 17.1997 16.364 16.364C17.1997 15.5282 17.8626 14.5361 18.3149 13.4442C18.7672 12.3522 19 11.1819 19 10C19 7.61305 18.0518 5.32387 16.364 3.63604C14.6761 1.94821 12.3869 1 10 1C7.61305 1 5.32387 1.94821 3.63604 3.63604C1.94821 5.32387 1 7.61305 1 10Z"
+										stroke="#85868C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<div
+									class="bg-black-#26272C text-white p-4 rounded-md rounded-tl-none text-base font-normal text-left absolute -top-2 -right-[305px] w-72 opacity-0 peer-hover:opacity-100">
+									<div class="w-2 overflow-hidden inline-block absolute left-0 top-5">
+										<div class=" h-3  bg-green-#0AAF60 rotate-45 transform origin-top-left"></div>
+									</div>
+									<h6 class="mb-4">
+										Стоимость забора груза включает в себя:</h6>
+									<ul class="list-decimal list-inside">
+										<li class="mb-3">Плату за въезд на территорию комплекса,</li>
+										<li class="mb-3">Погрузочно-разгрузочные работы,</li>
+										<li class="mb-3">Доставку до нашего склада,</li>
+										<li>Выгрузку на наш склад"</li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10 relative">
+			<div
+				class="absolute left-2.5 top-0 py-1 px-1.5 bg-green-#0AAF60 text-white text-sm font-black text-center rounded-tl-md rounded-br-md">
+				05
+			</div>
+			<table
+				class="border-separate border-2 border-grey-#9E9FA3 rounded-md py-10 px-8 border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A">
+				<thead class="text-black-#37383C  text-4xl font-extrabold">
+					<tr>
+						<th class="border rounded-tl-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8 text-left w-1/3">
+							Доставка/отгрузка до склада маркетплейса по схеме FBS
+						</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Выбор</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Единица измерения</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Количество</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Стоимость услуг <br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(рублей за единицу)</span>
+						</th>
+						<th class="border border-l-0 border-grey-#85868C rounded-tr-md px-4 py-5 bg-grey-#F8F8F8">Итоговая сумма
+							<br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(в рублях)</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 rounded-bl-md text-left text-blue-#212E55">
+							<div class="p-4 bg-violet-#F9F6FC border-2 border-l-8 border-violet-#481173 mb-5">
+								<span class="font-bold text-violet-#481173">WB FBS</span>
+								<span>
+									до удобного нам склада WB
+								</span>
+								<span class="text-grey-#4E5057">(кол-во товаров на отгрузку не ограничено)</span>
+							</div>
+							<div class="p-4 border-2 border-l-8 border-blue-#005BFF bg-blue-#F1F5FC mb-5">
+								<span class="font-bold text-blue-#005BFF">Ozon FBS</span>
+								<span>
+									доставка до ближайшего от нас ПВЗ
+								</span>
+								<span class="text-grey-#4E5057">
+									(до 10 штук или 0,5 м3 в день, если больше - вызываете курьера Ozon к нам на склад)
+								</span>
+							</div>
+							<div class="p-4 border-2 border-l-8 border-yellow-#DFAE00 bg-yellow-#FFFDF4">
+								<span class="font-bold text-yellow-#DFAE00">Yandex FBS</span>
+								<span>
+									доставка до ближайшего от нас ПВЗ
+								</span>
+								<span class="text-grey-#4E5057">
+									(до 80 штук или 0,5 м3 в день, далее вызываете курьера Yandex к нам на склад)
+								</span>
+							</div>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-11" name="yes-no-11" value="yes-11" class="hidden peer" checked>
+									<label for="yes-11"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-11" name="yes-no-11" value="no-11" class="hidden peer">
+									<label for="no-11"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">литры</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">6 720</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">1,5</td>
+						<td
+							class="border-r border-b border-grey-#85868C px-4 py-5 rounded-br-md text-green-#0AAF60 text-7.5xl font-extrabold">
+							<div class="flex items-center justify-center relative">
+								<span class="justify-self-center text-center">10 080</span>
+								<svg class="inline-block justify-self-end ml-4 peer" width="20" height="20" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M10 7H10.01M9 10H10V14H11M1 10C1 11.1819 1.23279 12.3522 1.68508 13.4442C2.13738 14.5361 2.80031 15.5282 3.63604 16.364C4.47177 17.1997 5.46392 17.8626 6.55585 18.3149C7.64778 18.7672 8.8181 19 10 19C11.1819 19 12.3522 18.7672 13.4442 18.3149C14.5361 17.8626 15.5282 17.1997 16.364 16.364C17.1997 15.5282 17.8626 14.5361 18.3149 13.4442C18.7672 12.3522 19 11.1819 19 10C19 7.61305 18.0518 5.32387 16.364 3.63604C14.6761 1.94821 12.3869 1 10 1C7.61305 1 5.32387 1.94821 3.63604 3.63604C1.94821 5.32387 1 7.61305 1 10Z"
+										stroke="#85868C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<div
+									class="bg-black-#26272C text-white p-4 rounded-md rounded-tl-none text-base font-normal text-left absolute -top-2 -right-[305px] w-72 opacity-0 peer-hover:opacity-100">
+									<div class="w-2 overflow-hidden inline-block absolute left-0 top-5">
+										<div class=" h-3  bg-green-#0AAF60 rotate-45 transform origin-top-left"></div>
+									</div>
+									<h6 class="mb-4">
+										Стоимость забора груза включает в себя:</h6>
+									<ul class="list-decimal list-inside">
+										<li class="mb-3">Плату за въезд на территорию комплекса,</li>
+										<li class="mb-3">Погрузочно-разгрузочные работы,</li>
+										<li class="mb-3">Доставку до нашего склада,</li>
+										<li>Выгрузку на наш склад"</li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10 relative">
+			<div
+				class="absolute left-2.5 top-0 py-1 px-1.5 bg-green-#0AAF60 text-white text-sm font-black text-center rounded-tl-md rounded-br-md">
+				06
+			</div>
+			<table
+				class="border-separate border-2 border-grey-#9E9FA3 rounded-md py-10 px-8 border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A">
+				<thead class="text-black-#37383C text-4xl font-extrabold">
+					<tr>
+						<th class="border rounded-tl-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8 text-left">
+							Хранение товаров
+						</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Выбор</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Единица измерения</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Количество</th>
+						<th class="border border-l-0 border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">Стоимость услуг <br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(рублей за единицу)</span>
+						</th>
+						<th class="border border-l-0 border-grey-#85868C rounded-tr-md px-4 py-5 bg-grey-#F8F8F8">Итоговая сумма
+							<br>
+							<span class="font-medium text-2xl text-grey-#5D5E62">(в рублях)</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left w-1/3 rounded-bl-md">
+							<h6 class="mb-5 text-6xl text-blue-#212E55">Ответственное хранение на нашем складе</h6>
+							<p class="mb-2 text-6xl">Что входит в данную услугу:</p>
+							<ul class="font-normal list-decimal list-inside ml-2">
+								<li class="mb-2.5"> Предоставление мест хранения на нашем складе</li>
+								<li class="mb-2.5"> Хранение товаров на паллетах</li>
+								<li class="mb-2.5"> Хранение товаров в ячейках</li>
+								<li class="mb-2.5"> Хранение товаров в зоне обработки</li>
+								<li> Хранение товаров в зоне отгрузки</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5 text-grey-#626368">
+							<ul class="flex items-center">
+								<li>
+									<input type="radio" id="yes-12" name="yes-no-12" value="yes-12" class="hidden peer" checked>
+									<label for="yes-12"
+										class="border border-r-0 border-grey-#85868C rounded-l-lg py-2 px-3 cursor-pointer peer-checked:bg-green-#0AAF60 peer-checked:text-white">
+										Да
+									</label>
+								</li>
+								<li>
+									<input type="radio" id="no-12" name="yes-no-12" value="no-12" class="hidden peer">
+									<label for="no-12"
+										class="border border-l-0 border-grey-#85868C rounded-r-lg py-2 px-3 cursor-pointer peer-checked:bg-red-#E46666 peer-checked:text-white">
+										Нет
+									</label>
+								</li>
+							</ul>
+						</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">литры</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">6 720</td>
+						<td class="border-r border-b border-grey-#85868C px-4 py-5">0,03</td>
+						<td
+							class="border-r border-b border-grey-#85868C px-4 py-5 text-green-#0AAF60 text-7.5xl font-extrabold rounded-br-md">
+							<div class="flex items-center justify-center relative">
+								<span class="justify-self-center text-center">6 048,00</span>
+								<svg class="inline-block justify-self-end ml-4 peer" width="20" height="20" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M10 7H10.01M9 10H10V14H11M1 10C1 11.1819 1.23279 12.3522 1.68508 13.4442C2.13738 14.5361 2.80031 15.5282 3.63604 16.364C4.47177 17.1997 5.46392 17.8626 6.55585 18.3149C7.64778 18.7672 8.8181 19 10 19C11.1819 19 12.3522 18.7672 13.4442 18.3149C14.5361 17.8626 15.5282 17.1997 16.364 16.364C17.1997 15.5282 17.8626 14.5361 18.3149 13.4442C18.7672 12.3522 19 11.1819 19 10C19 7.61305 18.0518 5.32387 16.364 3.63604C14.6761 1.94821 12.3869 1 10 1C7.61305 1 5.32387 1.94821 3.63604 3.63604C1.94821 5.32387 1 7.61305 1 10Z"
+										stroke="#85868C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								<div
+									class="bg-black-#26272C text-white p-4 rounded-md rounded-tl-none text-base font-normal text-left absolute -top-2 -right-[305px] w-72 opacity-0 peer-hover:opacity-100">
+									<div class="w-2 overflow-hidden inline-block absolute left-0 top-5">
+										<div class=" h-3  bg-green-#0AAF60 rotate-45 transform origin-top-left"></div>
+									</div>
+									<h6 class="mb-4">
+										Стоимость забора груза включает в себя:</h6>
+									<ul class="list-decimal list-inside">
+										<li class="mb-3">Плату за въезд на территорию комплекса,</li>
+										<li class="mb-3">Погрузочно-разгрузочные работы,</li>
+										<li class="mb-3">Доставку до нашего склада,</li>
+										<li>Выгрузку на наш склад"</li>
+									</ul>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10 relative">
+			<div
+				class="absolute left-2.5 top-0 py-1 px-1.5 bg-green-#0AAF60 text-white text-sm font-black text-center rounded-tl-md rounded-br-md">
+				07
+			</div>
+			<table
+				class="border-separate border-2 border-green-#0AAF60 rounded-md py-10 px-8 border-spacing-0 w-full font-semibold text-center text-6xl text-grey-#3E3E3F">
+				<thead class="text-black-#26272C text-[23px] font-bold">
+					<tr>
+						<th class="py-5 text-left w-3/4">Итоговые данные</th>
+						<th class="py-5">Стоимость услуг (в рублях)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="border-b border-grey-#85868C py-5 text-left w-3/4">
+							<div class="flex items-center">
+								<span class="text-sm text-green-#0AAF60 font-bold mr-2.5">01.</span>
+								<span>Приемка на нашем складе</span>
+							</div>
+						</td>
+						<td class="border-b border-grey-#85868C py-5 text-green-#0AAF60 text-[21px] font-extrabold">
+							3 360
+						</td>
+					</tr>
+					<tr>
+						<td class="border-b border-grey-#85868C py-5 text-left w-3/4">
+							<div class="flex items-center">
+								<span class="text-sm text-green-#0AAF60 font-bold mr-2.5">02.</span>
+								<span>Подготовительные работы</span>
+							</div>
+						</td>
+						<td class="border-b border-grey-#85868C py-5 text-green-#0AAF60 text-[21px] font-extrabold">
+							11 200
+						</td>
+					</tr>
+					<tr>
+						<td class="border-b border-grey-#85868C py-5 text-left w-3/4">
+							<div class="flex items-center">
+								<span class="text-sm text-green-#0AAF60 font-bold mr-2.5">03.</span>
+								<span>Упаковка товаров (материал + работа)</span>
+							</div>
+						</td>
+						<td class="border-b border-grey-#85868C py-5 text-green-#0AAF60 text-[21px] font-extrabold">
+							7 000
+						</td>
+					</tr>
+					<tr>
+						<td class="border-b border-grey-#85868C py-5 text-left w-3/4">
+							<div class="flex items-center">
+								<span class="text-sm text-green-#0AAF60 font-bold mr-2.5">04.</span>
+								<span>Подготовка партии товара к отгрузке</span>
+							</div>
+						</td>
+						<td class="border-b border-grey-#85868C py-5 text-green-#0AAF60 text-[21px] font-extrabold">
+							6 720
+						</td>
+					</tr>
+					<tr>
+						<td class="border-b border-grey-#85868C py-5 text-left w-3/4">
+							<div class="flex items-center">
+								<span class="text-sm text-green-#0AAF60 font-bold mr-2.5">05.</span>
+								<span>Доставка/отгрузка до склада маркетплейса по схеме FBS</span>
+							</div>
+						</td>
+						<td class="border-b border-grey-#85868C  py-5 text-green-#0AAF60 text-[21px] font-extrabold">
+							10 080
+						</td>
+					</tr>
+					<tr>
+						<td class="border-b border-grey-#85868C py-5 text-left w-3/4">
+							<div class="flex items-center">
+								<span class="text-sm text-green-#0AAF60 font-bold mr-2.5">06.</span>
+								<span>Хранение товаров</span>
+							</div>
+						</td>
+						<td class="border-b border-grey-#85868C py-5 text-green-#0AAF60 text-[21px] font-extrabold">
+							6 048
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10">
+			<table class="border-separate  border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A">
+				<thead class="text-black-#37383C text-4xl font-extrabold">
+					<tr>
+						<th
+							class="border border-r-0 rounded-tl-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8 text-left w-4/5 font-extrabold">
+							Если у Вас форма юридического лица, которому НДС в счете - не нужен, то цена без учета НДС, будет
+							следующей
+						</th>
+						<th class="border rounded-tr-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">
+							Цена без НДС под ключ
+						</th>
+					</tr>
+				</thead>
+				<tbody class="text-blue-#212E55">
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left text-6xl">
+							Итого за все оказанные работы и услуги (без НДС)
+						</td>
+						<td class="border border-2 border-green-#0AAF60 px-4 py-5 text-green-#0AAF60 text-5xl font-bold">
+							44 408
+						</td>
+					</tr>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left font-extrabold rounded-bl-md">
+							Стоимость работ и услуг за единицу товара "под ключ" (оплата на наше ИП, без НДС)
+						</td>
+						<td
+							class="border border-green-#0AAF60 bg-green-#0AAF60 px-4 py-5 text-white text-8xl font-black rounded-br-md">
+							31,72
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-10">
+			<table class="border-separate   border-spacing-0 w-full font-semibold text-center text-4xl text-black-#27282A">
+				<thead class="text-black-#37383C text-4xl font-extrabold">
+					<tr>
+						<th
+							class="border border-r-0 rounded-tl-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8 text-left w-4/5 font-extrabold">
+							Если у Вас форма юридического лица, которому НДС в счете - необходим, то цена с учетом НДС будет следующей
+						</th>
+						<th class="border rounded-tr-md border-grey-#85868C px-4 py-5 bg-grey-#F8F8F8">
+							Цена с НДС под ключ
+						</th>
+					</tr>
+				</thead>
+				<tbody class="text-blue-#212E55">
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left text-6xl">
+							Итого за все оказанные работы и услуги (с НДС, если он Вам нужен)
+						</td>
+						<td class="border border-2 border-green-#0AAF60 px-4 py-5 text-green-#0AAF60 text-5xl font-bold">
+							53 290
+						</td>
+					</tr>
+					<tr>
+						<td class="border border-t-0 border-grey-#85868C px-4 py-5 text-left font-extrabold rounded-bl-md">
+							Стоимость работ и услуг за единицу товара "под ключ" (оплата на наше ООО, с НДС)
+						</td>
+						<td
+							class="border border-green-#0AAF60 bg-green-#0AAF60 px-4 py-5 text-white text-8xl font-black rounded-br-md">
+							38,06
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="container w-[1280px] px-2.5 mx-auto mb-20">
+			<div class="flex items-center justify-center">
+				<button class="bg-green-#0AAF60 rounded-full p-4 flex items-center text-white">
+					<div class="p-5 bg-white rounded-full inline-block"><img class="" src="./public/img/excel.svg" alt=""></div>
+					<span class="ml-9 mr-16 text-6xl font-semibold">Сохранить в Exсel</span>
+				</button>
+			</div>
+		</div>
+		<div class="relative after:bg-blue-#212E55/95 after:w-full after:h-full after:absolute after:top-0">
+			<img src="./public/img/ContactUs.png" class="w-full h-full absolute " alt="">
+			<div class="container w-[1280px] px-2.5 mx-auto relative z-10 text-white pt-10 pb-16">
+				<h3 class="text-center text-9xl font-extrabold mb-8">Свяжитесь с нами:</h3>
+				<div class="flex items-center justify-center text-4xl font-semibold">
+					<button class="border border-green-#0AAF60 rounded-full px-8 py-5 flex items-center ">
+						<img class="" src="./public/img/whatsApp2.svg" alt="">
+						<span class="ml-4">Написать в WhatsApp</span>
+					</button>
+					<button class="border border-blue-#30BAEE rounded-full px-8 py-5 flex items-center ml-6">
+						<img class="" src="./public/img/telegram2.svg" alt="">
+						<span class="ml-4">Написать в Telegram</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container w-[1280px] px-2.5 mx-auto">
+			<div class="flex items-center py-3">
+				<span class="text-grey-#94969C text-2xl">По всем вопросам звоните или пишите нам на почту:</span>
+				<div class="flex items-center ml-12">
+					<a href="tel:+79266291134"><img src="./public/img/tel.svg" alt=""></a>
+					<a class="ml-2 font-bold text-4xl" href="tel:+79266291134">+7 926 629 11 34</a>
+				</div>
+				<div class="flex items-center ml-[88px]">
+					<a href="mailto:poisk@ruges.ru"><img src="./public/img/mail.svg" alt=""></a>
+					<a class="ml-2 font-semibold text-3xl" href="mailto:poisk@ruges.ru">poisk@ruges.ru</a>
+					<button
+						class="rounded-full py-3 px-12 border-[1px] border-grey-#C5CBDA ml-4 font-bold uppercase text-xs">Написать</button>
+				</div>
+				<div class="flex flex-col text-grey-#94969C ml-20 text-base">
+					<span>Мы работаем:</span>
+					<span>Пн-Вс (7 дней в неделю)</span>
+					<span>Часы работы: 8.00 - 22.00</span>
+				</div>
+				<div class=""></div>
+			</div>
+		</div>
+		<div class="bg-blue-#0E121F text-white">
+			<div class="container w-[1280px] px-2.5 mx-auto pt-12 pb-10">
+				<div class="flex items-start  justify-between">
+					<div class="max-w-[265px] text-base">
+						<div class="flex items-center mb-6">
+							<a href="#"><img src="./public/img/final_logo.svg" alt=""></a>
+							<a class="ml-2" href="#"><img src="./public/img/logoRight.svg" alt=""></a>
+						</div>
+						<p class="text-grey-#454956">
+							Компания PILLAVI занимается предоставлением услуг комплексного складского обслуживания (фулфилмента) для
+							наших клиентов.
+						</p>
+					</div>
+					<div class="mx-40 whitespace-nowrap font-semibold text-base">
+						<span class="mb-5 inline-block text-3xl">Информация</span>
+						<ul class="text-grey-#AFB2BC ">
+							<li>Главная</li>
+							<li class="mt-4">Калькулятор стоимости</li>
+							<li class="mt-4">Наши контакты</li>
+						</ul>
+					</div>
+					<div class="font-semibold text-xl">
+						<span class="mb-4 inline-block text-3xl">Мы находимся по адресу:</span>
+						<div class="flex items-start">
+							<img src="./public/img/map.svg" alt="">
+							<div class="ml-3">
+								<p class="mb-2 text-grey-#AFB2BC">
+									115432, г. Москва, 2-й Южнопортовый проезд, 10, строение 4.
+									(территория Южного Речного Порта)
+								</p>
+								<a class="text-green-#0AAF60 after:w-full relative after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:bg-green-#0AAF60 after:opacity-30"
+									href="#">Проложить маршрут</a>
+							</div>
+						</div>
+					</div>
+					<div class="ml-20  whitespace-nowrap font-semibold text-base">
+						<div class="flex items-center">
+							<div class="flex items-center">
+								<a class="p-4  bg-blue-#121B35 rounded-full" href="#"><img class="min-w-[18px] min-h-[19px]"
+										src="./public/img/avatar.svg" alt=""></a>
+								<a class="ml-2" href="#">Войти</a>
+							</div>
+							<button class="bg-white text-blue-#121B35 ml-4 py-3 px-4 rounded-full">Регистрация</button>
+						</div>
+						<div class="flex items-center mt-6">
+							<a href="" class=""><img src="./public/img/arrowDownAndLine.svg" alt=""></a>
+							<a class="ml-2" href="">Договор сотрудничества</a>
+						</div>
+						<div class="flex items-center mt-4">
+							<a href="" class=""><img src="./public/img/arrowDownAndLine.svg" alt=""></a>
+							<a class="ml-2" href="">Договор оферты</a>
+						</div>
+						<a class="mt-5 inline-block text-grey-#545760 after:w-full relative after:absolute after:left-0 after:-bottom-0 after:h-[2px] after:bg-grey-#545760 after:opacity-30"
+							href="">Политика конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-blue-#080B16 p-4 text-base">
+			<div class="container w-[1280px] px-2.5 mx-auto text-center text-grey-#5F616B">
+				<p>Pillavi © 2022 - Все права защищены</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

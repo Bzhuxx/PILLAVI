@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./public/styles.css">
+	<title>PILLAVI</title>
+</head>
+
+<body>
+	<header class="absolute w-full h-44 text-white pt-8 pb-20 z-20">
+		<div class="container w-[1280px] mx-auto px-2.5">
+			<div class="flex items-center justify-between">
+				<div class="flex items-center">
+					<a href="#"><img src="./public/img/logoLeft.svg" alt=""></a>
+					<a class="ml-2" href="#"><img src="./public/img/logoRight.svg" alt=""></a>
+				</div>
+				<nav>
+					<ul class="flex items-center text-grey-#C5CBDA font-bold text-2xl">
+						<li
+							class=" hover:text-white hover:after:w-8 hover:after:h-1 hover:after:absolute hover:after:left-0 hover:after:-bottom-2 hover:after:bg-green-#0AAF60 relative">
+							<a href="#">Главная</a>
+						</li>
+						<li
+							class="ml-12 hover:text-white hover:after:w-8 hover:after:h-1 hover:after:absolute hover:after:left-0 hover:after:-bottom-2 hover:after:bg-green-#0AAF60 relative">
+							<a href="#">Калькулятор</a>
+						</li>
+						<li
+							class="ml-12 hover:text-white hover:after:w-8 hover:after:h-1 hover:after:absolute hover:after:left-0 hover:after:-bottom-2 hover:after:bg-green-#0AAF60 relative">
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="flex items-center">
+					<div class="flex items-center font-bold text-4xl">
+						<a href="#"><img src="./public/img/tel.svg" alt=""></a>
+						<a class="ml-2" href="tel:+79266291134">+7 926 629 11 34</a>
+					</div>
+					<div class="flex items-center ml-12 font-semibold text-base">
+						<div class="flex items-center">
+							<a class="p-4  bg-blue-#121B35 rounded-full" href="#"><img src="./public/img/avatar.svg" alt=""></a>
+							<a class="ml-2" href="#">Войти</a>
+						</div>
+						<button class="bg-white text-blue-#121B35 ml-4 py-3 px-4 rounded-full">Регистрация</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="relative after:bg-blue-#212E55/95 after:w-full after:h-full after:absolute after:top-0">
+			<img src="./public/img/mainScreen.png" class="w-full h-full absolute " alt="">
+			<div class="container w-[1280px] mx-auto px-2.5 relative z-10 pt-44">
+				<div class="absolute top-0 right-0 z-10 pt-44">
+					<img src="./public/img/boxTelejka.png" alt="">
+				</div>
+				<div class=" flex flex-col text-grey-#EBEDF3">
+					<h2 class="text-white text-10xl font-extrabold w-1/2 mb-10">Полный комплекс складских услуг</h2>
+					<div class="grid gap-9 grid-cols-2 w-1/2 mb-7 text-base font-medium">
+						<div class="flex items-start ">
+							<img src="./public/img/car.svg" alt="">
+							<p class="ml-5">Бесплатный переезд к нам на склад при заключении договора</p>
+						</div>
+						<div class="flex items-start">
+							<img src="./public/img/box.svg" alt="">
+							<p class="ml-5">Прием, хранение, обработка и отгрузка Ваших товаров</p>
+						</div>
+						<div class="flex items-start">
+							<img src="./public/img/man.svg" alt="">
+							<p class="ml-5">Оборудованный склад и опытная команда с десятилетним стажем</p>
+						</div>
+						<div class="flex items-start">
+							<img src="./public/img/docx.svg" alt="">
+							<p class="ml-5">Работаем в соответствии с требованиями любых торговых сетей, маркетплейсов и служб
+								доставки
+							</p>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<a href="#about"
+							class="bg-green-#0AAF60 py-4 px-2 rounded-full inline-flex items-center text-xl font-medium">
+							<img class="bg-white p-3 ml-3 rounded-full" src="./public/img/arrowRight.svg" alt="">
+							<span class="ml-5 mr-5">Подробнее о компании</span>
+						</a>
+					</div>
+				</div>
+				<div class="flex items-center justify-end">
+					<span class="uppercase text-white opacity-10 text-xs font-extrabold">Листать ниже</span>
+					<a href="#" class="p-7 bg-white rounded-t-lg ml-4"><img src="./public/img/arrowDown.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="container w-[1280px] mx-auto px-2.5 py-20">
+			<div>
+				<h3 class="text-black-#26272C text-9xl font-extrabold mb-9">Почему мы</h3>
+				<div class="grid grid-cols-3 gap-10">
+					<div class="flex items-start">
+
+						<img class="relative z-10" src="./public/img/lock.svg" alt="">
+						<div
+							class="ml-10 relative after:absolute after:w-14 after:h-14 after:bg-green-#F2FAF6 after:rounded-full after:-left-20 after:top-5">
+							<h6 class="font-bold text-6xl mb-2 whitespace-nowrap">Прозрачность работы</h6>
+							<p class="text-grey-#5E5F65 text-xl font-medium">Никаких скрытых платежей, коэффициентов и т.д.</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+
+						<img class="relative z-10" src="./public/img/docxAndPan.svg" alt="">
+						<div
+							class="ml-10 relative after:absolute after:w-14 after:h-14 after:bg-green-#F2FAF6 after:rounded-full after:-left-20 after:top-5">
+							<h6 class="font-bold text-6xl mb-2 whitespace-nowrap">Выгодные тарифы</h6>
+							<p class="text-grey-#5E5F65 text-xl font-medium">Фиксированная ставка за полный комплекс услуг (более
+								подробно <a href="#"
+									class="text-green-#0AAF60 after:w-full relative after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:bg-green-#0AAF60 after:opacity-30">Калькулятор</a>)
+							</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+
+						<img class="relative z-10" src="./public/img/manAndDocx.svg" alt="">
+						<div
+							class="ml-10 relative after:absolute after:w-14 after:h-14 after:bg-green-#F2FAF6 after:rounded-full after:-left-20 after:top-5">
+							<h6 class="font-bold text-6xl mb-2 whitespace-nowrap">Работаем с любыми заказчиками</h6>
+							<p class="text-grey-#5E5F65 text-xl font-medium">Договор заключаем на ИП или ООО (+НДС 20% к цене на
+								калькуляторе сайта) по желанию заказчика</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+
+						<img class="relative z-10" src="./public/img/manAndTable.svg" alt="">
+						<div
+							class="ml-10 relative after:absolute after:w-14 after:h-14 after:bg-green-#F2FAF6 after:rounded-full after:-left-20 after:top-5">
+							<h6 class="font-bold text-6xl mb-2 whitespace-nowrap">Гибкость в работе</h6>
+							<p class="text-grey-#5E5F65 text-xl font-medium">
+								Возможность добавлять другие услуги для клиента в тариф (обсуждается лично с клиентом)
+							</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+
+						<img class="relative z-10" src="./public/img/house.svg" alt="">
+						<div
+							class="ml-10 relative after:absolute after:w-14 after:h-14 after:bg-green-#F2FAF6 after:rounded-full after:-left-20 after:top-5">
+							<h6 class="font-bold text-6xl mb-2 whitespace-nowrap">Транспортная доступность</h6>
+							<p class="text-grey-#5E5F65 text-xl font-medium">Склад в Москве, рядом с ТТК</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+						<img class="relative z-10" src="./public/img/shield.svg" alt="">
+						<div
+							class="ml-10 relative after:absolute after:w-14 after:h-14 after:bg-green-#F2FAF6 after:rounded-full after:-left-20 after:top-5">
+							<h6 class="font-bold text-6xl mb-2 whitespace-nowrap">Удобство</h6>
+							<p class="text-grey-#5E5F65 text-xl font-medium">Личный кабинет пользователя с товарными остатками, фото
+								товаров и т.д.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<img class="absolute -z-10" src="./public/img/aboutScreen.png" alt="">
+		<div id="about" class="">
+			<div class="container w-[1280px] mx-auto px-2.5">
+				<div class="flex items-start flex-col w-1/2 pt-10 pb-7">
+					<h3 class="text-9xl font-extrabold mb-5">О компании</h3>
+					<p class="mb-6">
+						Мы занимаемся предоставлением услуг комплексного складского обслуживания для наших клиентов. Осуществляем
+						прием, хранение, обработку и отгрузку Ваших товаров. Подготавливаем к отгрузке клиентский товар в
+						соответствии
+						с требованиями:
+					</p>
+					<div class="grid grid-cols-2 gap-4 text-base text-black-#333539 font-medium mb-9">
+						<div class="py-4 px-5 flex items-start rounded-lg bg-white shadow-[0_6px_14px_0x_rgba(0,0,0,0.4)]">
+							<span
+								class="text-green-#0AAF60 font-extrabold relative after:absolute after:w-2.5 after:h-2.5 after:-top-5 after:left-[3px] after:rounded-full after:bg-green-#0AAF60 after:drop-shadow-[0_9px_22px_rgba(10,175,96,0.7)]">01.</span>
+							<p class="ml-5">Любых маркетплейсов (Wildberries, OZON, Яндекс.Марке)т</p>
+						</div>
+						<div class="py-4 px-5 flex items-start rounded-lg bg-white shadow-[0_6px_14px_0x_rgba(0,0,0,0.4)]">
+							<span
+								class="text-green-#0AAF60 font-extrabold relative after:absolute after:w-2.5 after:h-2.5 after:-top-5 after:left-[3px] after:rounded-full after:bg-green-#0AAF60 after:drop-shadow-[0_9px_22px_rgba(10,175,96,0.7)]">02.</span>
+							<p class="ml-5">Любых торговых сетей (Перекресток, Ашан и т.д.)</p>
+						</div>
+						<div class="py-4 px-5 flex items-start rounded-lg bg-white shadow-[0_6px_14px_0x_rgba(0,0,0,0.4)]">
+							<span
+								class="text-green-#0AAF60 font-extrabold relative after:absolute after:w-2.5 after:h-2.5 after:-top-5 after:left-[3px] after:rounded-full after:bg-green-#0AAF60 after:drop-shadow-[0_9px_22px_rgba(10,175,96,0.7)]">03.</span>
+							<p class="ml-5">Любых служб доставок (Почта России, СДЕК и т.д.)</p>
+						</div>
+						<div class="py-4 px-5 flex items-start rounded-lg bg-white shadow-[0_6px_14px_0x_rgba(0,0,0,0.4)]">
+							<span
+								class="text-green-#0AAF60 font-extrabold relative after:absolute after:w-2.5 after:h-2.5 after:-top-5 after:left-[3px] after:rounded-full after:bg-green-#0AAF60 after:drop-shadow-[0_9px_22px_rgba(10,175,96,0.7)]">04.</span>
+							<p class="ml-5">Любых оптовых или розничных заказчиков с которыми сотрудничает наш клиент.</p>
+						</div>
+					</div>
+					<button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
+						class=" inline-flex items-center p-3 pr-6 bg-green-#0AAF60 rounded-full">
+						<img class="p-3 bg-white rounded-full" src="./public/img/blackTel.svg" alt="">
+						<span class="ml-4 text-white text-xl font-medium">Задать вопрос менеджеру</span>
+					</button>
+					<div id="defaultModal" tabindex="-1" aria-hidden="true"
+						class="bg-blue-#080B16/95  fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+						<div class="rounded-md px-6 py-8 flex flex-col justify-center items-center bg-white font-semibold">
+							<button data-modal-hide="defaultModal" type="button" class="self-end -mt-5 -mr-3">
+								<img src="public/img/close.svg" alt="">
+							</button>
+							<h5 class="mb-2 text-black-#27282A text-[26px]">Способы связи:</h5>
+							<p class="mb-5 text-grey-#505257 text-2xl">Выбери удобный мессенджер для связи с нами:</p>
+							<div class="flex flex-col justify-center items-center text-4xl font-semibold mb-7">
+								<a href="#"
+									class="border border-green-#0AAF60 rounded-full px-8 py-5 inline-flex items-center text-green-#0AAF60 mb-5">
+									<img class="" src="./public/img/whatsApp2.svg" alt="">
+									<span class="ml-4 whitespace-nowrap">Написать в WhatsApp</span>
+								</a>
+								<a href="#"
+									class="border border-blue-#30BAEE rounded-full px-8 py-5 inline-flex items-center text-blue-#30BAEE">
+									<img class="" src="./public/img/telegram2.svg" alt="">
+									<span class="ml-4 whitespace-nowrap">Написать в Telegram</span>
+								</a>
+							</div>
+							<button data-modal-hide="defaultModal" type="button"
+								class="text-2xl font-medium inline-flex items-center px-16 py-5 bg-green-#0AAF60 rounded-full">
+								<span class="text-white text-xl font-medium">Закрыть</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2248.4393813008096!2d37.688659077200484!3d55.69873399615395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTXCsDQxJzU1LjQiTiAzN8KwNDEnMjguNCJF!5e0!3m2!1sru!2sru!4v1696258020118!5m2!1sru!2sru"
+				width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+
+	</main>
+	<footer>
+		<div class="container w-[1280px] mx-auto px-2.5">
+			<div class="flex items-center py-3">
+				<span class="text-grey-#94969C text-2xl">По всем вопросам звоните или пишите нам на почту:</span>
+				<div class="flex items-center ml-12">
+					<a href="tel:+79266291134"><img src="./public/img/tel.svg" alt=""></a>
+					<a class="ml-2 font-bold text-4xl" href="tel:+79266291134">+7 926 629 11 34</a>
+				</div>
+				<div class="flex items-center ml-[88px]">
+					<a href="mailto:poisk@ruges.ru"><img src="./public/img/mail.svg" alt=""></a>
+					<a class="ml-2 font-semibold text-3xl" href="mailto:poisk@ruges.ru">poisk@ruges.ru</a>
+					<button
+						class="rounded-full py-3 px-12 border-[1px] border-grey-#C5CBDA ml-4 font-bold uppercase text-xs">Написать</button>
+				</div>
+				<div class="flex flex-col text-grey-#94969C ml-20 text-base">
+					<span>Мы работаем:</span>
+					<span>Пн-Вс (7 дней в неделю)</span>
+					<span>Часы работы: 8.00 - 22.00</span>
+				</div>
+				<div class=""></div>
+			</div>
+		</div>
+		<div class="bg-blue-#0E121F text-white">
+			<div class="container w-[1280px] mx-auto px-2.5 pt-12 pb-10">
+				<div class="flex items-start  justify-between">
+					<div class="max-w-[265px] text-base">
+						<div class="flex items-center mb-6">
+							<a href="#"><img src="./public/img/final_logo.svg" alt=""></a>
+							<a class="ml-2" href="#"><img src="./public/img/logoRight.svg" alt=""></a>
+						</div>
+						<p class="text-grey-#454956">
+							Компания PILLAVI занимается предоставлением услуг комплексного складского обслуживания (фулфилмента) для
+							наших клиентов.
+						</p>
+					</div>
+					<div class="mx-40 whitespace-nowrap font-semibold text-base">
+						<span class="mb-5 inline-block text-3xl">Информация</span>
+						<ul class="text-grey-#AFB2BC ">
+							<li>Главная</li>
+							<li class="mt-4">Калькулятор стоимости</li>
+							<li class="mt-4">Наши контакты</li>
+						</ul>
+					</div>
+					<div class="font-semibold text-xl">
+						<span class="mb-4 inline-block text-3xl">Мы находимся по адресу:</span>
+						<div class="flex items-start">
+							<img src="./public/img/map.svg" alt="">
+							<div class="ml-3">
+								<p class="mb-2 text-grey-#AFB2BC">
+									115432, г. Москва, 2-й Южнопортовый проезд, 10, строение 4.
+									(территория Южного Речного Порта)
+								</p>
+								<a class="text-green-#0AAF60 after:w-full relative after:absolute after:left-0 after:-bottom-[1px] after:h-[2px] after:bg-green-#0AAF60 after:opacity-30"
+									href="#">Проложить маршрут</a>
+							</div>
+						</div>
+					</div>
+					<div class="ml-20  whitespace-nowrap font-semibold text-base">
+						<div class="flex items-center">
+							<div class="flex items-center">
+								<a class="p-4  bg-blue-#121B35 rounded-full" href="#"><img class="min-w-[18px] min-h-[19px]"
+										src="./public/img/avatar.svg" alt=""></a>
+								<a class="ml-2" href="#">Войти</a>
+							</div>
+							<button class="bg-white text-blue-#121B35 ml-4 py-3 px-4 rounded-full">Регистрация</button>
+						</div>
+						<div class="flex items-center mt-6">
+							<a href="" class=""><img src="./public/img/arrowDownAndLine.svg" alt=""></a>
+							<a class="ml-2" href="">Договор сотрудничества</a>
+						</div>
+						<div class="flex items-center mt-4">
+							<a href="" class=""><img src="./public/img/arrowDownAndLine.svg" alt=""></a>
+							<a class="ml-2" href="">Договор оферты</a>
+						</div>
+						<a class="mt-5 inline-block text-grey-#545760 after:w-full relative after:absolute after:left-0 after:-bottom-0 after:h-[2px] after:bg-grey-#545760 after:opacity-30"
+							href="">Политика конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-blue-#080B16 p-4 text-base">
+			<div class="container w-[1280px] mx-auto px-2.5 text-center text-grey-#5F616B">
+				<p>Pillavi © 2022 - Все права защищены</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>
